@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .stat-card {
+            transition: all 0.3s ease;
+            background-color: #374151; /* bg-gray-700 */
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            background-color: #4b5563; /* slightly lighter gray */
+        }
+        .table-container {
+            overflow-x: auto;
+        }
+        table {
+            min-width: 600px;
+        }
+        body {
+            background-color: #111827; /* bg-gray-900 */
+            color: #f3f4f6; /* text-gray-100 */
+        }
+        .section-bg {
+            background-color: #1f2937; /* bg-gray-800 */
+        }
+        .table-header {
+            background-color: #1f2937; /* bg-gray-800 */
+            color: #f3f4f6; /* text-gray-100 */
+        }
+        .table-row {
+            background-color: #374151; /* bg-gray-700 */
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .table-row:nth-child(even) {
+            background-color: #4b5563; /* slightly lighter gray */
+        }
+        .text-secondary {
+            color: #d1d5db; /* text-gray-300 */
+        }
+        .text-footer {
+            color: #9ca3af; /* text-gray-400 */
+        }
+        .home-icon {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .home-icon:hover {
+            color: #60a5fa; /* primary blue */
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header with Home Icon -->
+        <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center space-x-4">
+                <i class="fas fa-home home-icon text-2xl text-gray-300" 
+                   onclick="window.location.href='index.html'"
+                   title="Go to Home"></i>
+                <h1 class="text-3xl font-bold text-gray-100">Internship Dashboard</h1>
+            </div>
+        </div>
+        
+        <!-- Stats Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Internships Applied</h3>
+                <p class="text-3xl font-bold text-blue-400">2</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Completed</h3>
+                <p class="text-3xl font-bold text-green-400">0</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Shortlisted</h3>
+                <p class="text-3xl font-bold text-yellow-400">1</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Selected</h3>
+                <p class="text-3xl font-bold text-purple-400">1</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Courses Enrolled</h3>
+                <p class="text-3xl font-bold text-red-400">2</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Courses Inprogress</h3>
+                <p class="text-3xl font-bold text-indigo-400">1</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Courses Completed</h3>
+                <p class="text-3xl font-bold text-teal-400">1</p>
+            </div>
+            <div class="stat-card rounded-lg shadow p-6 text-center">
+                <h3 class="text-lg font-semibold text-gray-300 mb-2">Certificates</h3>
+                <p class="text-3xl font-bold text-green-400">1</p>
+            </div>
+        </div>
+
+        <!-- Concurrent Internship Section -->
+        <div class="section-bg rounded-lg shadow mb-8 p-6">
+            <h2 class="text-xl font-bold text-gray-100 mb-4">Concurrent Internship</h2>
+            <div class="table-container">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="py-2 px-4 border text-left">ULB/Smart City Name</th>
+                            <th class="py-2 px-4 border text-left">Internship Name</th>
+                            <th class="py-2 px-4 border text-left">Date of Application</th>
+                            <th class="py-2 px-4 border text-left">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="py-2 px-4 border">Private Internship</td>
+                            <td class="py-2 px-4 border">Python Developer</td>
+                            <td class="py-2 px-4 border">12-07-2024</td>
+                            <td class="py-2 px-4 border">Selected</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="py-2 px-4 border">Government Internship</td>
+                            <td class="py-2 px-4 border">Web Developer</td>
+                            <td class="py-2 px-4 border">12-02-2025</td>
+                            <td class="py-2 px-4 border">Shortlisted</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Course Name Section -->
+        <div class="section-bg rounded-lg shadow p-6">
+            <h2 class="text-xl font-bold text-gray-100 mb-4">Course Name</h2>
+            <div class="table-container">
+                <table class="w-full border-collapse">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="py-2 px-4 border text-left">Course Name</th>
+                            <th class="py-2 px-4 border text-left">Date of Application</th>
+                            <th class="py-2 px-4 border text-left">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="table-row">
+                            <td class="py-2 px-4 border">PYTHON PROGRAMMING</td>
+                            <td class="py-2 px-4 border">2024-02-10</td>
+                            <td class="py-2 px-4 border">Completed</td>
+                        </tr>
+                        <tr class="table-row">
+                            <td class="py-2 px-4 border"></td>
+                            <td class="py-2 px-4 border">2025-03-10</td>
+                            <td class="py-2 px-4 border">Inprogress</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // You can add JavaScript functionality here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Example: Add click event to stat cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    const title = this.querySelector('h3').textContent;
+                    console.log(`Clicked on ${title}`);
+                    // You can add more functionality here, like filtering the tables
+                });
+            });
+
+            // You could add filtering, sorting, or data loading functionality here
+        });
+    </script>
+</body>
+</html>

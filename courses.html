@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | EduCareer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+        .course-card {
+            background-color: #374151;
+            border-radius: 0.5rem;
+            transition: transform 0.2s;
+        }
+        .course-card:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background-color: #60a5fa;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #3b82f6;
+        }
+        .text-primary {
+            color: #60a5fa;
+        }
+        .bg-primary {
+            background-color: #60a5fa;
+        }
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+        .bg-gray-900 {
+            background-color: #111827;
+        }
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+        .text-gray-300 {
+            color: #d1d5db;
+        }
+        .text-gray-400 {
+            color: #9ca3af;
+        }
+        .button-group {
+            display: flex;
+            gap: 0.5rem;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-['Pacifico'] text-2xl text-primary">EduCareer</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="text-gray-500 hover:text-blue-400">About Us</a>
+                    <a href="courses.html" class="text-primary border-b-2 border-blue-400 text-blue-400">Courses</a>
+                    <a href="int.html" class="text-gray-500 hover:text-blue-400">Internships</a>
+                </div>
+                <button id="mobileMenuButton" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="text-gray-500 hover:text-blue-400">About Us</a>
+                    <a href="courses.html" class="text-primary  border-blue-400 text-blue-400">Courses</a>
+                    <a href="int.html" class="text-gray-500 hover:text-blue-400">Internships</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-100 mb-8">Our Courses</h1>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Course Cards -->
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">C Programming</h3>
+                    <p class="text-gray-300 mb-4">Duration: 5 weeks</p>
+                    <div class="button-group">
+                        <a href="https://drive.google.com/drive/folders/14et5fc7E8_fTC_pZRodX2uocetHfg5fS?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRggZZgYpPMUxdY1CYkZtARR" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Data Structures</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://drive.google.com/drive/folders/1uc1bwxRLChSTBuF0vGCoWBL1I3rotrhF?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRj9lld8sWIUNwlKfdUoPd1Y" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Java Programming</h3>
+                    <p class="text-gray-300 mb-4">Duration: 6 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1VifOthtNEzY8K3hy6A98OVtYfIXwG78UrNKeR8uBGZY/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRjKA_NuK9mHmlk0dZzuP1P5" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Python for Beginners</h3>
+                    <p class="text-gray-300 mb-4">Duration: 4 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1OT7iDwz65gafQc_eqhyVstAr-Lzp1ESzOnJx6fif4oU/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRiueC_HzwFallNO76hfXBB7" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">DBMS</h3>
+                    <p class="text-gray-300 mb-4">Duration: 5 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1nI5XfSq6Fmr4p9YLnWN75ieRFRr8wjavIaYu1Q3rahE/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRj5hQZ8uQ9j8k8JgYwJpRzP" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Full Stack Development</h3>
+                    <p class="text-gray-300 mb-4">Duration: 10 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1fPnDUgrxeHQwvt5Pni1bbuTr2uRRBQgzZw72xE5x5Aw/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRj9OVRtWYEn7Y8Q0x1X9WqZ" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Advanced Data Structures</h3>
+                    <p class="text-gray-300 mb-4">Duration: 6 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1-IRQ82hoapnBMjWL41bjcyVV1OOwAIKKfXS_ScfMSrI/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRh6isJ01MBnbNpV3ZsktSyS" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Operating Systems</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1LQMo6Et5njIVdbEiNfc2fuCaF3kDm_c-hDK5ZBKT5CA/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRiVhbXDGLXDk_OQAeuVcp2O" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Artificial Intelligence</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1IpTus4dNN7w1Wk5NxuYI89mFSjuhSgq4L2QeQ8S9QWc/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRjMH3mWf6kwqiTbT798eAOm" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Data Science</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1OeOQWivLPrUHVj55j8vftuEic3ID9WWgnSO7QYyCbSc/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRjoG6aJ4FvFU1tlXbjLBiOP" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Machine Learning</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1kVAPPKNAu8oCZCCqKA78wJYyJ9wENtiQFkUP3cV3oZc/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRgp46KUv4ZY69yXmpwKOIev" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <div class="course-card p-6">
+                    <h3 class="text-xl font-semibold text-gray-100 mb-2">Software Engineering</h3>
+                    <p class="text-gray-300 mb-4">Duration: 8 weeks</p>
+                    <div class="button-group">
+                        <a href="https://docs.google.com/document/d/1li2d_9MbUUFHh91VS-BUIEmSVUarvLGi0hFJlxpGflo/edit?usp=drive_link" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block">View Course</a>
+                        <a href="https://www.youtube.com/playlist?list=PLBlnK6fEyqRj5wyx5Qd4uVdY7U4kZkFfB" target="_blank" class="btn-primary px-4 py-2 rounded-md inline-block flex items-center gap-1">
+                            <i class="ri-play-circle-line"></i> Video
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-2xl mb-4 text-primary">EduCareer</h3>
+                    <p class="text-gray-400">
+                        Transforming education through technology and innovation.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="int.html" class="text-gray-400 hover:text-white">Internships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="term.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">1234 Education Street</li>
+                        <li class="text-gray-400">San Francisco, CA 94105</li>
+                        <li class="text-gray-400">contact@example.com</li>
+                        <li class="text-gray-400">+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 EduCareer. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

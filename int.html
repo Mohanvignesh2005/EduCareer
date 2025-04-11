@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Listings | EduCareer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827;
+            color: #f3f4f6;
+        }
+        .internship-card {
+            background-color: #374151;
+            border-radius: 0.5rem;
+            transition: transform 0.2s;
+        }
+        .internship-card:hover {
+            transform: translateY(-2px);
+        }
+        .btn-primary {
+            background-color: #60a5fa;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #3b82f6;
+        }
+        .text-primary {
+            color: #60a5fa;
+        }
+        .bg-primary {
+            background-color: #60a5fa;
+        }
+        .bg-gray-800 {
+            background-color: #1f2937;
+        }
+        .bg-gray-900 {
+            background-color: #111827;
+        }
+        .text-gray-100 {
+            color: #f3f4f6;
+        }
+        .text-gray-300 {
+            color: #d1d5db;
+        }
+        .text-gray-400 {
+            color: #9ca3af;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="bg-gray-800 shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center">
+                    <a href="index.html" class="font-['Pacifico'] text-2xl text-primary">EduCareer</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="text-gray-500 hover:text-blue-400">About Us</a>
+                    <a href="courses.html" class="text-gray-500 hover:text-blue-400">Courses</a>
+                    <a href="int.html" class="text-primary border-b-2 border-blue-400 text-blue-400">Internships</a>
+                </div>
+                <button id="mobileMenuButton" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                    <i class="ri-menu-line text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile menu -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-500 hover:text-blue-400">Home</a>
+                    <a href="about.html" class="text-gray-500 hover:text-blue-400">About Us</a>
+                    <a href="courses.html" class="text-gray-500 hover:text-blue-400">Courses</a>
+                    <a href="int.html" class="text-primary  border-blue-400 text-blue-400">Internships</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20 pb-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-3xl font-bold text-gray-100 mb-8">Internship Opportunities</h1>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Internship 1 -->
+                <div class="internship-card p-6" id="card1">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">FULL STACK DEVELOPER (SOFTWARE ENGINEER)</h2>
+                    <p class="text-gray-300 mb-3"><strong>Skilldrive Infotech LLP</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-home-4-line mr-2"></i> <span>Virtual Internship</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 24-03-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Location: Pan India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 10 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: Unpaid</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details1')">View Details</button>
+                </div>
+
+                <!-- Internship 2 -->
+                <div class="internship-card p-6" id="card2">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">WATER SUPPLY</h2>
+                    <p class="text-gray-300 mb-3"><strong>Vadodara Smart City Development Limited</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-briefcase-line mr-2"></i> <span>Full Time</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 01-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Location: Baroda, Gujarat</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 4 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹14000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details2')">View Details</button>
+                </div>
+
+                <!-- Internship 3 -->
+                <div class="internship-card p-6" id="card3">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">MACHINE LEARNING INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>NeuralNet Labs</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-home-4-line mr-2"></i> <span>Remote</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 10-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Location: Bengaluru, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 6 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹10000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details3')">View Details</button>
+                </div>
+
+                <!-- Internship 4 -->
+                <div class="internship-card p-6" id="card4">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">GRAPHIC DESIGN INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>PixelForge Studios</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-briefcase-line mr-2"></i> <span>Part Time</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 15-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Mumbai, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 3 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹5000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details4')">View Details</button>
+                </div>
+
+                <!-- Internship 5 -->
+                <div class="internship-card p-6" id="card5">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">HR INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>TalentBridge Pvt. Ltd.</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-briefcase-line mr-2"></i> <span>Full Time</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 05-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Delhi, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 2 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹8000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details5')">View Details</button>
+                </div>
+
+                <!-- Internship 6 -->
+                <div class="internship-card p-6" id="card6">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">CONTENT WRITER INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>WordWeave Media</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-home-4-line mr-2"></i> <span>Remote</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 12-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Hyderabad, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 3 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹4000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details6')">View Details</button>
+                </div>
+
+                <!-- Internship 7 -->
+                <div class="internship-card p-6" id="card7">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">MARKETING INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>GrowBiz Solutions</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-building-line mr-2"></i> <span>On-site</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 20-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Pune, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 2 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹6000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details7')">View Details</button>
+                </div>
+
+                <!-- Internship 8 -->
+                <div class="internship-card p-6" id="card8">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">DATA ANALYST INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>Quantify AI</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-home-smile-line mr-2"></i> <span>Hybrid</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 18-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Chennai, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 4 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹12000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details8')">View Details</button>
+                </div>
+
+                <!-- Internship 9 -->
+                <div class="internship-card p-6" id="card9">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">FINANCE INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>FinEdge Advisory</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-briefcase-line mr-2"></i> <span>Full Time</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 22-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Kolkata, India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 3 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹9000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details9')">View Details</button>
+                </div>
+
+                <!-- Internship 10 -->
+                <div class="internship-card p-6" id="card10">
+                    <h2 class="text-xl font-semibold text-gray-100 mb-2">UI/UX DESIGN INTERN</h2>
+                    <p class="text-gray-300 mb-3"><strong>DesignNest Technologies</strong></p>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-home-4-line mr-2"></i> <span>Remote</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-calendar-line mr-2"></i> <span>Start Date: 25-04-2025</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-map-pin-line mr-2"></i> <span>Pan India</span></div>
+                    <div class="flex items-center text-gray-300 mb-1"><i class="ri-time-line mr-2"></i> <span>Duration: 2 Months</span></div>
+                    <div class="flex items-center text-gray-300 mb-4"><i class="ri-money-dollar-circle-line mr-2"></i> <span>Stipend: ₹7000 /month</span></div>
+                    <button class="btn-primary px-4 py-2 rounded-md w-full" onclick="showSection('details10')">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Details Sections -->
+        <!-- Details Section for Internship 1 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details1">
+            <h2 class="text-2xl font-bold text-primary mb-4">Full Stack Developer Internship at Skilldrive Infotech LLP</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Work on real-world software projects involving both frontend and backend technologies. Collaborate with experienced developers and contribute to live systems.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Develop web applications using HTML, CSS, JavaScript, and React</li>
+                    <li>Build backend APIs using Node.js and Express</li>
+                    <li>Write clean, maintainable code and perform testing</li>
+                    <li>Participate in code reviews and agile meetings</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Basic understanding of web development</li>
+                    <li>Knowledge of Git and GitHub</li>
+                    <li>Good communication and teamwork skills</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Letter of Recommendation, Real-world project experience</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 24-03-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 10 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> Unpaid</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 4</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply1')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 1 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply1">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Full Stack Developer</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name1" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name1" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email1" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email1" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume1" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume1" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 2 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details2">
+            <h2 class="text-2xl font-bold text-primary mb-4">Water Supply Internship at Vadodara Smart City Development Limited</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Assist in planning, designing, and implementing smart water supply infrastructure across Vadodara city. Gain field experience and learn from civic planning experts.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Support water supply system design and documentation</li>
+                    <li>Conduct surveys and collect data from the field</li>
+                    <li>Work with city engineers and project leads</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Background in Civil/Environmental Engineering</li>
+                    <li>Basic understanding of water systems</li>
+                    <li>Willingness to work on field projects</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, On-site learning, Networking opportunities</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 01-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 4 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹14000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Apply by:</span> 05-04-2025</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply2')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 2 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply2">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Water Supply Internship</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name2" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name2" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email2" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email2" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume2" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume2" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 3 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details3">
+            <h2 class="text-2xl font-bold text-primary mb-4">Machine Learning Internship at NeuralNet Labs</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Work on real-world machine learning models and contribute to building AI solutions for various industries.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Assist in model training and evaluation</li>
+                    <li>Analyze large datasets using Python libraries</li>
+                    <li>Collaborate with data scientists on ongoing projects</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Good understanding of Python and ML frameworks (scikit-learn, TensorFlow)</li>
+                    <li>Strong analytical and problem-solving skills</li>
+                    <li>Prior ML project experience is a plus</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Recommendation letter, Flexible work hours</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 10-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 6 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹10000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 3</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply3')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 3 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply3">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Machine Learning Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name3" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name3" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email3" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email3" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume3" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume3" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 4 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details4">
+            <h2 class="text-2xl font-bold text-primary mb-4">Graphic Design Internship at PixelForge Studios</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Help design marketing content, social media creatives, and branding materials for various clients. Bring your creativity to life in a collaborative and dynamic environment.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Create visual assets for social media and web</li>
+                    <li>Design branding materials</li>
+                    <li>Collaborate with the marketing team</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Knowledge of Adobe Photoshop/Illustrator</li>
+                    <li>Creativity and attention to detail</li>
+                    <li>Portfolio of previous design work</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Letter of recommendation, Work from home</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 15-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 3 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹5000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 2</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply4')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 4 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply4">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Graphic Design Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name4" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name4" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email4" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email4" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume4" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume4" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 5 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details5">
+            <h2 class="text-2xl font-bold text-primary mb-4">HR Internship at TalentBridge Pvt. Ltd.</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Assist with HR operations including recruitment, onboarding, and employee engagement. Get hands-on experience with HR tools and processes.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Screen resumes and schedule interviews</li>
+                    <li>Support onboarding processes</li>
+                    <li>Assist with HR documentation and records</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Good communication skills</li>
+                    <li>Interest in HR and people operations</li>
+                    <li>Basic knowledge of MS Office</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Work from home, Flexible work hours</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 05-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 2 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹8000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 5</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply5')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 5 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply5">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for HR Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name5" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name5" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email5" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email5" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume5" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume5" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 6 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details6">
+            <h2 class="text-2xl font-bold text-primary mb-4">Content Writing Internship at WordWeave Media</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Write blogs, articles, and SEO content for a variety of industries. Enhance your writing skills and get published on popular platforms.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Write original and engaging content</li>
+                    <li>Conduct research and optimize for SEO</li>
+                    <li>Edit and proofread before publishing</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Excellent English writing skills</li>
+                    <li>Creativity and grammar accuracy</li>
+                    <li>Basic SEO understanding</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Flexible schedule, Mentorship</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 12-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 3 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹4000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 5</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply6')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 6 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply6">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Content Writer Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name6" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name6" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email6" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email6" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume6" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume6" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 7 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details7">
+            <h2 class="text-2xl font-bold text-primary mb-4">Marketing Internship at GrowBiz Solutions</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Work with the marketing team on strategy, content planning, and digital campaign execution. Get real-world experience in digital marketing and analytics.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Assist in campaign planning and execution</li>
+                    <li>Analyze campaign metrics</li>
+                    <li>Engage with online communities</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Knowledge of social media and marketing trends</li>
+                    <li>Communication and analytical skills</li>
+                    <li>Creative thinking</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, PPO opportunity, Flexible hours</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 20-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 2 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹6000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 6</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply7')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 7 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply7">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Marketing Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name7" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name7" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email7" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email7" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume7" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume7" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 8 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details8">
+            <h2 class="text-2xl font-bold text-primary mb-4">Data Analyst Internship at Quantify AI</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Assist the analytics team in preparing reports, dashboards, and data visualizations. Learn data cleaning, statistical analysis, and business insights generation.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Clean and structure large datasets</li>
+                    <li>Build reports using Excel/Tableau</li>
+                    <li>Support decision-making with data</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Knowledge of Excel, SQL, and basic statistics</li>
+                    <li>Detail-oriented and analytical mindset</li>
+                    <li>Basic knowledge of Python is a plus</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Hands-on experience, Mentorship</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 18-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 4 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹12000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 3</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply8')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 8 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply8">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Data Analyst Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name8" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name8" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email8" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email8" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume8" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume8" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 9 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details9">
+            <h2 class="text-2xl font-bold text-primary mb-4">Finance Internship at FinEdge Advisory</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Assist in preparing financial reports, budgeting, and market analysis. Learn about financial modeling and corporate finance practices.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Support monthly financial reporting</li>
+                    <li>Conduct market and risk analysis</li>
+                    <li>Assist in financial forecasting</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Basic knowledge of finance and accounting</li>
+                    <li>Good Excel and analytical skills</li>
+                    <li>Attention to detail</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Paid internship, On-job learning</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 22-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 3 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹9000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 4</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply9')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 9 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply9">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for Finance Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name9" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name9" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email9" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email9" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume9" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume9" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Details Section for Internship 10 -->
+        <div class="internship-card p-6 max-w-4xl mx-auto hidden" id="details10">
+            <h2 class="text-2xl font-bold text-primary mb-4">UI/UX Design Internship at DesignNest Technologies</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Description:</h3>
+                <p class="text-gray-300">Design and improve user interfaces and experiences for web and mobile platforms. Work closely with product teams and developers to create intuitive user journeys.</p>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Responsibilities:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Create wireframes and mockups</li>
+                    <li>Conduct user research and testing</li>
+                    <li>Collaborate with developers and product teams</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Requirements:</h3>
+                <ul class="list-disc pl-5 text-gray-300 space-y-1">
+                    <li>Knowledge of Figma/Sketch</li>
+                    <li>Understanding of UI/UX principles</li>
+                    <li>Portfolio of past projects</li>
+                </ul>
+            </div>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-gray-100 mb-2">Perks:</h3>
+                <p class="text-gray-300">Certificate, Creative freedom, Work from home</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Start Date:</span> 25-04-2025</p>
+                    <p class="text-gray-300"><span class="font-semibold">Duration:</span> 2 Months</p>
+                </div>
+                <div>
+                    <p class="text-gray-300"><span class="font-semibold">Stipend:</span> ₹7000 /month</p>
+                    <p class="text-gray-300"><span class="font-semibold">Openings:</span> 2</p>
+                </div>
+            </div>
+            
+            <div class="flex space-x-4">
+                <button class="btn-primary px-6 py-2 rounded-md" onclick="showSection('apply10')">Apply Now</button>
+                <button class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back to Listings</button>
+            </div>
+        </div>
+
+        <!-- Apply Form for Internship 10 -->
+        <div class="internship-card p-6 max-w-2xl mx-auto hidden" id="apply10">
+            <h2 class="text-2xl font-bold text-primary mb-6">Apply for UI/UX Design Intern</h2>
+            <form class="space-y-4">
+                <div>
+                    <label for="name10" class="block text-gray-300 mb-2">Full Name:</label>
+                    <input type="text" id="name10" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="email10" class="block text-gray-300 mb-2">Email:</label>
+                    <input type="email" id="email10" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary" required>
+                </div>
+                
+                <div>
+                    <label for="resume10" class="block text-gray-300 mb-2">Upload Resume:</label>
+                    <input type="file" id="resume10" class="w-full px-4 py-2 rounded-md bg-gray-700 border border-gray-600 text-gray-100 focus:outline-none focus:ring-2 focus:ring-primary file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary file:text-white hover:file:bg-blue-500" required>
+                </div>
+                
+                <div class="flex space-x-4 pt-4">
+                    <button type="submit" class="btn-primary px-6 py-2 rounded-md">Submit Application</button>
+                    <button type="button" class="bg-gray-700 text-gray-100 px-6 py-2 rounded-md hover:bg-gray-600" onclick="showSection('card')">Back</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="font-['Pacifico'] text-2xl mb-4 text-primary">EduCareer</h3>
+                    <p class="text-gray-400">
+                        Transforming education through technology and innovation.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+                        <li><a href="int.html" class="text-gray-400 hover:text-white">Internships</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="help.html" class="text-gray-400 hover:text-white">Help Center</a></li>
+                        <li><a href="term.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                        <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4 text-primary">Contact Us</h4>
+                    <ul class="space-y-2">
+                        <li class="text-gray-400">1234 Education Street</li>
+                        <li class="text-gray-400">San Francisco, CA 94105</li>
+                        <li class="text-gray-400">contact@example.com</li>
+                        <li class="text-gray-400">+1 (555) 123-4567</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2025 EduCareer. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function showSection(sectionId) {
+            const sections = ["card1", "card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", 
+                            "details1", "details2", "details3", "details4", "details5", "details6", "details7", "details8", "details9", "details10", 
+                            "apply1", "apply2", "apply3", "apply4", "apply5", "apply6", "apply7", "apply8", "apply9", "apply10"];
+            
+            // Hide all sections
+            sections.forEach(id => document.getElementById(id)?.classList.add("hidden"));
+            
+            if (sectionId === 'card') {
+                // Show all card sections
+                for (let i = 1; i <= 10; i++) {
+                    document.getElementById(`card${i}`)?.classList.remove("hidden");
+                }
+            } else {
+                // Show the requested section
+                document.getElementById(sectionId)?.classList.remove("hidden");
+            }
+            
+            // Scroll to top when showing a new section
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+    </script>
+</body>
+</html>

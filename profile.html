@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #111827; /* bg-gray-900 */
+      color: #f3f4f6; /* text-gray-100 */
+      line-height: 1.6;
+      padding: 20px;
+    }
+    
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #1f2937; /* bg-gray-800 */
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      position: relative;
+    }
+    
+    .profile-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      margin-bottom: 30px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #374151; /* bg-gray-700 */
+      justify-content: space-between;
+    }
+    
+    .profile-picture-container {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+      order: 2;
+    }
+    
+    .profile-picture {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #60a5fa; /* border-primary */
+    }
+    
+    .upload-btn {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      background-color: #60a5fa; /* bg-primary */
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    
+    .profile-info {
+      flex: 1;
+      min-width: 300px;
+      order: 1;
+    }
+    
+    .profile-name {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #f3f4f6; /* text-gray-100 */
+    }
+    
+    .profile-title {
+      color: #d1d5db; /* text-gray-300 */
+      margin-bottom: 15px;
+    }
+    
+    .profile-contact {
+      margin-top: 15px;
+    }
+    
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    
+    .contact-icon {
+      margin-right: 10px;
+      color: #60a5fa; /* text-primary */
+      width: 20px;
+      text-align: center;
+    }
+    
+    .edit-btn {
+      background-color: #60a5fa; /* bg-primary */
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+      display: inline-block;
+    }
+    
+    .profile-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+    
+    .detail-section {
+      position: relative;
+      padding-bottom: 20px;
+    }
+    
+    .detail-section:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #374151; /* bg-gray-700 */
+    }
+    
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #60a5fa; /* text-primary */
+      padding-bottom: 5px;
+      border-bottom: 2px solid #374151; /* bg-gray-700 */
+    }
+    
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    
+    .detail-item {
+      margin-bottom: 15px;
+    }
+    
+    .detail-label {
+      font-weight: 600;
+      color: #d1d5db; /* text-gray-300 */
+      margin-bottom: 5px;
+      display: block;
+    }
+    
+    .detail-value {
+      padding: 8px 0;
+      color: #f3f4f6; /* text-gray-100 */
+    }
+    
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    
+    .skill-tag {
+      background-color: #374151; /* bg-gray-700 */
+      color: #60a5fa; /* text-primary */
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+    
+    .about-section {
+      margin-top: 15px;
+    }
+    
+    .home-btn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #60a5fa; /* bg-primary */
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      z-index: 100;
+    }
+    
+    .home-btn:hover {
+      background-color: #3b82f6; /* Slightly darker blue for hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="profile-header">
+      <div class="profile-info">
+        <h1 class="profile-name" id="profile-name">John Doe</h1>
+        <p class="profile-title" id="profile-title">Software Developer</p>
+        
+        <div class="profile-contact">
+          <div class="contact-item">
+            <span class="contact-icon">📧</span>
+            <span id="profile-email">john.doe@example.com</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-icon">📱</span>
+            <span id="profile-phone">+1 (555) 123-4567</span>
+          </div>
+        </div>
+        
+        <button class="edit-btn" onclick="window.location.href='edit.html'">Edit Profile</button>
+      </div>
+      
+      <div class="profile-picture-container">
+        <img id="profile-pic" class="profile-picture" src="https://via.placeholder.com/150" alt="Profile Picture">
+        <div class="upload-btn" onclick="document.getElementById('file-input').click()">+</div>
+        <input type="file" id="file-input" accept="image/*" style="display: none;">
+      </div>
+    </div>
+    
+    <div class="profile-sections">
+      <div class="detail-section">
+        <h2 class="section-title">Personal Information</h2>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Date of Birth</span>
+            <div class="detail-value" id="profile-dob">January 1, 1990</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Gender</span>
+            <div class="detail-value" id="profile-gender">Male</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Nationality</span>
+            <div class="detail-value" id="profile-nationality">American</div>
+          </div>
+         </div>
+        <div class="about-section">
+          <span class="detail-label">About</span>
+          <div class="detail-value" id="profile-about">No information provided</div>
+        </div>
+      </div>
+      
+      <div class="detail-section">
+        <h2 class="section-title">Education</h2>
+        <div class="detail-grid">
+          <div class="detail-item">
+            <span class="detail-label">Education Level</span>
+            <div class="detail-value" id="profile-education-level">Postgraduate</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Degree</span>
+            <div class="detail-value" id="profile-degree">Master's in Computer Science</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Stream</span>
+            <div class="detail-value" id="profile-stream">Computer Science</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">University</span>
+            <div class="detail-value" id="profile-university">Stanford University</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Year of Study</span>
+            <div class="detail-value" id="profile-year">Completed</div>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">CGPA</span>
+            <div class="detail-value" id="profile-cgpa">9.5</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="detail-section">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-list" id="skills-list">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GO TO HOME Button -->
+  <button class="home-btn" onclick="window.location.href='index.html'">GO TO HOME</button>
+
+  <script>
+    // Load profile data from localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+      const profileData = JSON.parse(localStorage.getItem('profileData')) || {};
+      
+      // Set profile picture - use stored one or default placeholder
+      document.getElementById('profile-pic').src = profileData.profilePic || 'https://via.placeholder.com/150';
+      
+      // Set basic info
+      if (profileData.firstName || profileData.lastName) {
+        document.getElementById('profile-name').textContent = 
+          `${profileData.firstName || ''} ${profileData.lastName || ''}`.trim();
+      }
+      
+      // Set contact info
+      if (profileData.email) {
+        document.getElementById('profile-email').textContent = profileData.email;
+      }
+      if (profileData.phone && profileData.countryCode) {
+        document.getElementById('profile-phone').textContent = 
+          `${profileData.countryCode} ${profileData.phone}`;
+      }
+      
+      // Set personal info
+      if (profileData.dob) {
+        document.getElementById('profile-dob').textContent = profileData.dob;
+      }
+      if (profileData.gender) {
+        document.getElementById('profile-gender').textContent = profileData.gender;
+      }
+      if (profileData.nationality) {
+        document.getElementById('profile-nationality').textContent = profileData.nationality;
+      }
+      if (profileData.about) {
+        document.getElementById('profile-about').textContent = profileData.about;
+      }
+      
+      // Set education info
+      if (profileData.education) {
+        if (profileData.education.level) {
+          const levelText = profileData.education.level === 'UG' ? 'Undergraduate' : 'Postgraduate';
+          document.getElementById('profile-education-level').textContent = levelText;
+        }
+        if (profileData.education.degree) {
+          document.getElementById('profile-degree').textContent = profileData.education.degree;
+        }
+        if (profileData.education.stream) {
+          document.getElementById('profile-stream').textContent = profileData.education.stream;
+        }
+        if (profileData.education.university) {
+          document.getElementById('profile-university').textContent = profileData.education.university;
+        }
+        if (profileData.education.yearOfStudy) {
+          document.getElementById('profile-year').textContent = profileData.education.yearOfStudy;
+        }
+        if (profileData.education.cgpa) {
+          document.getElementById('profile-cgpa').textContent = profileData.education.cgpa;
+        }
+      }
+      
+      // Set skills
+      if (profileData.skills && profileData.skills.length > 0) {
+        const skillsList = document.getElementById('skills-list');
+        skillsList.innerHTML = '';
+        profileData.skills.forEach(skill => {
+          const skillTag = document.createElement('div');
+          skillTag.className = 'skill-tag';
+          skillTag.textContent = skill;
+          skillsList.appendChild(skillTag);
+        });
+      }
+    });
+    
+    // Handle profile picture upload
+    document.getElementById('file-input').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(event) {
+          const img = document.getElementById('profile-pic');
+          img.src = event.target.result;
+          
+          // Update localStorage
+          const profileData = JSON.parse(localStorage.getItem('profileData')) || {};
+          profileData.profilePic = event.target.result;
+          localStorage.setItem('profileData', JSON.stringify(profileData));
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>

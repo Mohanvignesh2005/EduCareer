@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us - Learning Platform</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src="script.js" type="text/javascript"></script>
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#3b82f6',
+secondary: '#10b981'
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+</style>
+</head>
+<body class="bg-gray-900 text-gray-100">
+<nav class="bg-gray-800 shadow-sm fixed w-full z-50">
+<div class="max-w-7xl mx-auto px-4">
+<div class="flex justify-between h-16 items-center">
+<div class="flex items-center">
+<a href="index.html" class="font-['Pacifico'] text-2xl text-primary">EduCareer</a>
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a href="index.html" data-readdy="true" class="text-gray-500 hover:text-primary">Home</a>
+<a href="about.html" class="text-primary border-b-2 border-primary">About Us</a>
+<a href="courses.html" class="text-gray-500 hover:text-primary">Courses</a>
+<a href="int.html" class="text-gray-500 hover:text-primary">Intenships</a>
+</div>
+<button id="mobileMenuButton" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="md:hidden hidden pb-4">
+<div class="flex flex-col space-y-4">
+<a href="index.html" data-readdy="true" class="text-gray-500 hover:text-primary">Home</a>
+<a href="about.html" class="text-primary  border-primary">About Us</a>
+<a href="courses.html" class="text-gray-500 hover:text-primary">Courses</a>
+<a href="int.html" class="text-gray-500 hover:text-primary">Intenships</a>
+</div>
+</div>
+</div>
+</nav>
+<section class="pt-16 relative bg-gradient-to-r from-primary/10 to-secondary/10">
+<div class="max-w-7xl mx-auto px-4 py-20">
+<div class="flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 md:pr-12 mb-8 md:mb-0">
+<h1 class="text-4xl sm:text-5xl font-bold mb-6">Transforming Education for Tomorrow's Leaders</h1>
+<p class="text-lg sm:text-xl text-gray-400 mb-8">Founded in 2020, we've been on a mission to make quality education accessible to everyone. Our innovative learning platform combines cutting-edge technology with expert instruction to create an unparalleled educational experience.</p>
+</div>
+<div class="w-full md:w-1/2">
+<img src="https://public.readdy.ai/ai/img_res/bc8afd33da41605794a375a7d9ee92f1.jpg" alt="About Us Hero" class="rounded-lg shadow-xl w-full">
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">Our Journey</h2>
+<div class="relative">
+<div class="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-700 hidden md:block"></div>
+<div class="space-y-16">
+<div class="relative flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 text-right pr-8 mb-4 md:mb-0">
+<h3 class="text-xl font-semibold mb-2">Platform Launch</h3>
+<p class="text-gray-400">Started with 10 courses and 100 students</p>
+<p class="text-primary">2020</p>
+</div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center z-10 mx-auto md:mx-0">
+<i class="ri-rocket-line text-white text-xl"></i>
+</div>
+<div class="w-full md:w-1/2 pl-8 hidden md:block"></div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 pr-8 hidden md:block"></div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center z-10 mx-auto md:mx-0">
+<i class="ri-team-line text-white text-xl"></i>
+</div>
+<div class="w-full md:w-1/2 pl-8 mt-4 md:mt-0">
+<h3 class="text-xl font-semibold mb-2">Global Expansion</h3>
+<p class="text-gray-400">Reached 50,000 students worldwide</p>
+<p class="text-primary">2022</p>
+</div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 text-right pr-8 mb-4 md:mb-0">
+<h3 class="text-xl font-semibold mb-2">Enterprise Solutions</h3>
+<p class="text-gray-400">Launched corporate training programs</p>
+<p class="text-primary">2023</p>
+</div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center z-10 mx-auto md:mx-0">
+<i class="ri-building-line text-white text-xl"></i>
+</div>
+<div class="w-full md:w-1/2 pl-8 hidden md:block"></div>
+</div>
+<div class="relative flex flex-col md:flex-row items-center">
+<div class="w-full md:w-1/2 pr-8 hidden md:block"></div>
+<div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center z-10 mx-auto md:mx-0">
+<i class="ri-award-line text-white text-xl"></i>
+</div>
+<div class="w-full md:w-1/2 pl-8 mt-4 md:mt-0">
+<h3 class="text-xl font-semibold mb-2">Industry Recognition</h3>
+<p class="text-gray-400">Named Best Online Learning Platform</p>
+<p class="text-primary">2025</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">Our Values</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+<div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-lightbulb-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Innovation</h3>
+<p class="text-gray-400">Continuously evolving our platform with cutting-edge technology</p>
+</div>
+<div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-group-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Accessibility</h3>
+<p class="text-gray-400">Making quality education available to everyone, everywhere</p>
+</div>
+<div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-shield-star-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Excellence</h3>
+<p class="text-gray-400">Maintaining the highest standards in educational content</p>
+</div>
+<div class="bg-gray-800 p-8 rounded-lg shadow-lg text-center">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<i class="ri-heart-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-4">Community</h3>
+<p class="text-gray-400">Fostering a supportive learning environment for all students</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">Meet Our Leadership Team</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/9aa1134802c2ef34ac506c910dd55daa.jpg" alt="CEO" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+<h3 class="text-xl font-semibold mb-2">Alexander Mitchell</h3>
+<p class="text-primary mb-2">Chief Executive Officer</p>
+<p class="text-gray-600 mb-4">Former Google executive with 15+ years in EdTech</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-linkedin-fill text-xl"></i></a>
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-twitter-fill text-xl"></i></a>
+</div>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/a7b12780a5e74e31a1ad35305de5199a.jpg" alt="CTO" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+<h3 class="text-xl font-semibold mb-2">Dr. Sarah Chen</h3>
+<p class="text-primary mb-2">Chief Technology Officer</p>
+<p class="text-gray-600 mb-4">PhD in Computer Science, led innovation at Microsoft</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-linkedin-fill text-xl"></i></a>
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-twitter-fill text-xl"></i></a>
+</div>
+</div>
+<div class="text-center">
+<img src="https://public.readdy.ai/ai/img_res/08ef0c16b313ea0789f435c7e8185a7f.jpg" alt="COO" class="w-48 h-48 rounded-full mx-auto mb-4 object-cover">
+<h3 class="text-xl font-semibold mb-2">James Rodriguez</h3>
+<p class="text-primary mb-2">Chief Operating Officer</p>
+<p class="text-gray-600 mb-4">MBA from Harvard, scaled 3 successful startups</p>
+<div class="flex justify-center space-x-4">
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-linkedin-fill text-xl"></i></a>
+<a href="#" class="text-gray-400 hover:text-primary"><i class="ri-twitter-fill text-xl"></i></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-900">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">Our Impact</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div>
+<div class="text-4xl font-bold text-primary mb-2" id="studentCount">0</div>
+<p class="text-xl text-gray-600">Students Worldwide</p>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2" id="courseCount">0</div>
+<p class="text-xl text-gray-600">Courses Available</p>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2" id="instructorCount">0</div>
+<p class="text-xl text-gray-600">Expert Instructors</p>
+</div>
+<div>
+<div class="text-4xl font-bold text-primary mb-2" id="countryCount">0</div>
+<p class="text-xl text-gray-600">Countries Reached</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-gray-800">
+<div class="max-w-7xl mx-auto px-4">
+<h2 class="text-3xl font-bold text-center mb-16">Our Partners</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+<a href="#" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+<i class="ri-google-fill text-4xl md:text-6xl text-gray-400"></i>
+</a>
+<a href="#" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+<i class="ri-microsoft-fill text-4xl md:text-6xl text-gray-400"></i>
+</a>
+<a href="#" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+<i class="ri-amazon-fill text-4xl md:text-6xl text-gray-400"></i>
+</a>
+<a href="#" class="flex items-center justify-center grayscale hover:grayscale-0 transition-all">
+<i class="ri-apple-fill text-4xl md:text-6xl text-gray-400"></i>
+</a>
+</div>
+</div>
+</section>
+<footer class="bg-gray-800 text-white py-12">
+<div class="max-w-7xl mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-['Pacifico'] text-2xl mb-4 text-primary">EduCareer</h3>
+<p class="text-gray-400">Transforming education through technology and innovation.</p>
+</div>
+<div>
+    <h4 class="text-lg font-semibold mb-4 text-primary">Quick Links</h4>
+    <ul class="space-y-2">
+        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+        <li><a href="courses.html" class="text-gray-400 hover:text-white">Courses</a></li>
+        <li><a href="int.html" class="text-gray-400 hover:text-white">Internships</a></li>
+    </ul>
+</div>
+<div>
+    <h4 class="text-lg font-semibold mb-4 text-primary">Support</h4>
+    <ul class="space-y-2">
+        <li><a href="help.html" class="text-gray-400 hover:text-white">Help Center</a></li>
+        <li><a href="term.html" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+        <li><a href="privacy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+        <li><a href="faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+    </ul>
+</div>
+<div>
+    <h4 class="text-lg font-semibold mb-4 text-primary">Contact Us</h4>
+    <ul class="space-y-2">
+        <li class="text-gray-400">1234 Education Street</li>
+        <li class="text-gray-400">San Francisco, CA 94105</li>
+        <li class="text-gray-400">contact@example.com</li>
+        <li class="text-gray-400">+1 (555) 123-4567</li>
+    </ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 text-center">
+<p class="text-gray-400">
+    &copy; 2025 EduCareer. All rights reserved.
+</p>
+</div>
+</div>
+</footer>
+<script>
+function animateValue(obj, start, end, duration) {
+let startTimestamp = null;
+const step = (timestamp) => {
+if (!startTimestamp) startTimestamp = timestamp;
+const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+obj.innerHTML = Math.floor(progress * (end - start) + start).toLocaleString();
+if (progress < 1) {
+window.requestAnimationFrame(step);
+}
+};
+window.requestAnimationFrame(step);
+}
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+animateValue(document.getElementById('studentCount'), 0, 250000, 2000);
+animateValue(document.getElementById('courseCount'), 0, 1000, 2000);
+animateValue(document.getElementById('instructorCount'), 0, 500, 2000);
+animateValue(document.getElementById('countryCount'), 0, 195, 2000);
+observer.unobserve(entry.target);
+}
+});
+}, { threshold: 0.5 });
+observer.observe(document.querySelector('#studentCount').parentElement.parentElement);
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+</script>
+</body>
+</html>
